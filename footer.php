@@ -41,7 +41,9 @@
                                     <header>
                                         <h2>What's this all about?</h2>
                                     </header>
-                                    <a href="#" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic10.jpg" alt="" /></a>
+                                    <a href="#" class="image featured">
+                                        <img src="<?php bloginfo('template_directory') ?>/images/pic10.jpg" alt="" />
+                                    </a>
                                     <p>
                                         This is <strong>Dopetrope</strong> a free, fully responsive HTML5 site template by
                                         <a href="http://n33.co">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a> It's released for free under
@@ -135,13 +137,10 @@
         </div>
 
         <!-- Scripts -->
-            <script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/jquery.min.js"></script>
-            <script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/jquery.dropotron.min.js"></script>
-            <script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/skel.min.js"></script>
-            <script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/skel-viewport.min.js"></script>
-            <script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/util.js"></script>
-            <!--[if lte IE 8]><script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/ie/respond.min.js"></script><![endif]-->
-            <script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/main.js"></script>
+
+        <?php wp_footer(); ?>
+        <!--[if lte IE 8]><script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/ie/respond.min.js"></script><![endif]-->
+
 
     </body>
 </html>

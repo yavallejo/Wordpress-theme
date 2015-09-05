@@ -10,14 +10,15 @@
      * @param bool $in_footer (optional) Whether to enqueue the script before </head> or before </body>
      */
     function misRecursos() {
-
-        wp_enqueue_style( 'style', get_stylesheet_uri() ); // añade style.css
-
+        wp_enqueue_style("style",get_stylesheet_uri());
+        wp_enqueue_script( 'dropotron', get_template_directory_uri() . '/assets/js/jquery.dropotron.min.js', array( 'jquery' ), '1.4.3', true);
+        wp_enqueue_script( 'skel', get_template_directory_uri() . '/assets/js/skel.min.js', array( 'jquery' ), '3.0.0', true);
+        wp_enqueue_script( 'skel-viewport', get_template_directory_uri() . '/assets/js/skel-viewport.min.js', array( 'jquery' ), '3.0.0', true);
+        wp_enqueue_script( 'util', get_template_directory_uri() . '/assets/js/util.js', array( 'jquery' ), '1.0.0', true);
+        wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '1.0.0', true);
     }
 
     add_action( 'wp_enqueue_scripts', 'misRecursos' );
-
-
 
 
 ?>

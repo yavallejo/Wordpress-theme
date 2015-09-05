@@ -10,7 +10,7 @@
         <meta charset="<?php bloginfo('charset'); ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!--[if lte IE 8]><script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/ie/html5shiv.js"></script><![endif]-->
-
+        <?php wp_head(); ?>
         <!--[if lte IE 8]><link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/ie8.css" /><![endif]-->
     </head>
     <body class="homepage">
