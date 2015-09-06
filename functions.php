@@ -1,7 +1,15 @@
 <?php
 
+    register_nav_menus( array(
+
+        'principal' => 'Menú Principal'
+
+
+
+        ));
+
     /**
-     * Enqueue scripts
+     * Agregamos los scripts y los css que vamos a utilizar en  nuestro sitio web.
      *
      * @param string $handle Script name
      * @param string $src Script url
@@ -19,6 +27,8 @@
     }
 
     add_action( 'wp_enqueue_scripts', 'misRecursos' );
+
+
 
 
 ?>

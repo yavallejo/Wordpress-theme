@@ -22,10 +22,10 @@
                     <div id="header">
 
                         <!-- Logo -->
-                            <h1><a href="index.html">Dopetrope</a></h1>
+                            <h1><a href="<?php home_url(); ?>"><?php bloginfo('name') ?></a></h1>
 
                         <!-- Nav -->
-                            <nav id="nav">
+                           <!--  <nav id="nav">
                                 <ul>
                                     <li class="current"><a href="index.html">Home</a></li>
                                     <li>
@@ -51,7 +51,21 @@
                                     <li><a href="right-sidebar.html">Right Sidebar</a></li>
                                     <li><a href="no-sidebar.html">No Sidebar</a></li>
                                 </ul>
-                            </nav>
+                            </nav> -->
+
+                    <?php
+                           /**
+                            * Displays a navigation menu
+                            * @param array $args Arguments
+                            */
+                            $args = array(
+                                'theme_location' => 'principal',
+                                'container' => 'nav',
+                                'container_id' => 'nav',
+                            );
+
+                            wp_nav_menu( $args );
+                    ?>
 
                         <!-- Banner -->
                             <section id="banner">
