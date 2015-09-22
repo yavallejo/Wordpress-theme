@@ -12,82 +12,41 @@
                                             <h2>My Portfolio</h2>
                                         </header>
                                         <div class="row">
+                                        <?php
+                                                query_posts(array(
+                                                    "showposts" => 6,
+                                                    "cat" => 4
+                                                    ));
+                                              ?>
+
+                                            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                                             <div class="4u 12u(mobile)">
-                                                <section class="box">
+
+                                            <!-- post -->
+                                            <section class="box">
                                                     <a href="#" class="image featured">
                                                     <img src="<?php bloginfo('template_directory') ?>/images/pic02.jpg" alt="" /></a>
                                                     <header>
-                                                        <h3>Ipsum feugiat et dolor</h3>
+                                                        <h3><?php the_title(); ?></h3>
                                                     </header>
-                                                    <p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+                                                    <p><?php the_excerpt(); ?></p>
                                                     <footer>
-                                                        <a href="#" class="button alt">Find out more</a>
+                                                        <a href="<?php the_permalink(); ?>" class="button alt">Find out more</a>
                                                     </footer>
                                                 </section>
+
+
+
                                             </div>
-                                            <div class="4u 12u(mobile)">
-                                                <section class="box">
-                                                    <a href="#" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic03.jpg" alt="" /></a>
-                                                    <header>
-                                                        <h3>Sed etiam lorem nulla</h3>
-                                                    </header>
-                                                    <p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-                                                    <footer>
-                                                        <a href="#" class="button alt">Find out more</a>
-                                                    </footer>
-                                                </section>
-                                            </div>
-                                            <div class="4u 12u(mobile)">
-                                                <section class="box">
-                                                    <a href="#" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic04.jpg" alt="" /></a>
-                                                    <header>
-                                                        <h3>Consequat et tempus</h3>
-                                                    </header>
-                                                    <p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-                                                    <footer>
-                                                        <a href="#" class="button alt">Find out more</a>
-                                                    </footer>
-                                                </section>
-                                            </div>
+                                            <?php endwhile; ?>
+                                            <!-- post navigation -->
+                                            <?php else: ?>
+                                            <!-- no posts found -->
+                                            <h3>No hay nada</h3>
+                                            <?php endif; ?>
+                                            <?php wp_reset_query(); ?>
                                         </div>
-                                        <div class="row">
-                                            <div class="4u 12u(mobile)">
-                                                <section class="box">
-                                                    <a href="#" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic05.jpg" alt="" /></a>
-                                                    <header>
-                                                        <h3>Blandit sed adipiscing</h3>
-                                                    </header>
-                                                    <p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-                                                    <footer>
-                                                        <a href="#" class="button alt">Find out more</a>
-                                                    </footer>
-                                                </section>
-                                            </div>
-                                            <div class="4u 12u(mobile)">
-                                                <section class="box">
-                                                    <a href="#" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic06.jpg" alt="" /></a>
-                                                    <header>
-                                                        <h3>Etiam nisl consequat</h3>
-                                                    </header>
-                                                    <p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-                                                    <footer>
-                                                        <a href="#" class="button alt">Find out more</a>
-                                                    </footer>
-                                                </section>
-                                            </div>
-                                            <div class="4u 12u(mobile)">
-                                                <section class="box">
-                                                    <a href="#" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic07.jpg" alt="" /></a>
-                                                    <header>
-                                                        <h3>Dolore nisl feugiat</h3>
-                                                    </header>
-                                                    <p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-                                                    <footer>
-                                                        <a href="#" class="button alt">Find out more</a>
-                                                    </footer>
-                                                </section>
-                                            </div>
-                                        </div>
+
                                     </section>
 
                             </div>
