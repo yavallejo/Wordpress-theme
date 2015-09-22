@@ -23,7 +23,7 @@
                                             <div class="4u 12u(mobile)">
 
                                             <!-- post -->
-                                            <section class="box">
+                                                <section class="box">
                                                     <a href="#" class="image featured">
                                                     <img src="<?php bloginfo('template_directory') ?>/images/pic02.jpg" alt="" /></a>
                                                     <header>
@@ -34,15 +34,12 @@
                                                         <a href="<?php the_permalink(); ?>" class="button alt">Find out more</a>
                                                     </footer>
                                                 </section>
-
-
-
                                             </div>
                                             <?php endwhile; ?>
                                             <!-- post navigation -->
                                             <?php else: ?>
                                             <!-- no posts found -->
-                                            <h3>No hay nada</h3>
+                                            <p>Ups!! no existe nada para esta categoria</p>
                                             <?php endif; ?>
                                             <?php wp_reset_query(); ?>
                                         </div>
@@ -60,38 +57,38 @@
                                             <h2>The Blog</h2>
                                         </header>
                                         <div class="row">
+                                        <?php
+                                                query_posts(array(
+                                                    "showposts" => 2,
+                                                    "cat" => 5
+                                                    ));
+                                              ?>
+
+                                            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                                             <div class="6u 12u(mobile)">
                                                 <section class="box">
                                                     <a href="#" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic08.jpg" alt="" /></a>
                                                     <header>
-                                                        <h3>Magna tempus consequat lorem</h3>
-                                                        <p>Posted 45 minutes ago</p>
+                                                        <h3><?php the_title(); ?></h3>
+
                                                     </header>
-                                                    <p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit  adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
+                                                    <?php the_excerpt(); ?>
                                                     <footer>
                                                         <ul class="actions">
-                                                            <li><a href="#" class="button icon fa-file-text">Continue Reading</a></li>
+                                                            <li><a href="<?php the_permalink(); ?>" class="button icon fa-file-text">Continue Reading</a></li>
                                                             <li><a href="#" class="button alt icon fa-comment">33 comments</a></li>
                                                         </ul>
                                                     </footer>
                                                 </section>
                                             </div>
-                                            <div class="6u 12u(mobile)">
-                                                <section class="box">
-                                                    <a href="#" class="image featured"><img src="<?php bloginfo('template_directory') ?>/images/pic09.jpg" alt="" /></a>
-                                                    <header>
-                                                        <h3>Aptent veroeros et aliquam</h3>
-                                                        <p>Posted 45 minutes ago</p>
-                                                    </header>
-                                                    <p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit  adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
-                                                    <footer>
-                                                        <ul class="actions">
-                                                            <li><a href="#" class="button icon fa-file-text">Continue Reading</a></li>
-                                                            <li><a href="#" class="button alt icon fa-comment">33 comments</a></li>
-                                                        </ul>
-                                                    </footer>
-                                                </section>
-                                            </div>
+                                            <?php endwhile; ?>
+                                            <!-- post navigation -->
+                                            <?php else: ?>
+                                            <!-- no posts found -->
+                                            <p>Ups!! no existe nada para esta categoria</p>
+                                            <?php endif; ?>
+                                            <?php wp_reset_query(); ?>
+
                                         </div>
                                     </section>
 
