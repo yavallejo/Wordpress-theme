@@ -1,5 +1,24 @@
 <?php
 
+
+// Activando el soporte para las image_size_names_choose
+
+
+
+
+if ( function_exists( 'add_theme_support' ) ) {
+    add_theme_support( 'post-thumbnails' );
+
+    set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions (cropped)
+
+    // additional image sizes
+    // delete the next line if you do not need additional image sizes
+    add_image_size( 'category-thumb', 374, 260, true );
+    add_image_size( 'category-full', 783, 290, true );
+}
+
+
+
     register_nav_menus( array(
 
         'principal' => 'Menú Principal'

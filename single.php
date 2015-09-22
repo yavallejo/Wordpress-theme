@@ -41,7 +41,12 @@
                                 <!-- Content -->
                                     <article class="box post">
                                         <a href="#" class="image featured">
-                                           <img src="images/pic01.jpg" alt="" />
+                                           <?php
+                                                        // check if the post has a Post Thumbnail assigned to it.
+                                                            if ( has_post_thumbnail() ) {
+                                                                the_post_thumbnail('category-full');
+                                                            }
+                                                       ?>
                                         </a>
                                         <header>
                                             <h2><?php the_title(); ?></h2>
