@@ -66,6 +66,10 @@ Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, 
 		box-sizing: border-box;
 	}
 
+.text--red{
+	color:red;
+}
+
 /* Containers */
 
 	.container {
