@@ -1,10 +1,47 @@
 <?php
 
+// Activando el soporte para los sidebar
+
+if (function_exists('register_sidebar')) {
+       /**
+        * Creates a sidebar
+        * @param string|array  Builds Sidebar based off of 'name' and 'id' values.
+        */
+        // $args = array(
+        //     'name'          => __( 'Ultimas Entradas Footer'),
+        //     'id'            => 'ultimas_entradas_footer',
+        //     'description'   => '',
+        //     'class'         => '',
+        //     'before_widget' => '',
+        //     'after_widget'  => '',
+        //     'before_title'  => '',
+        //     'after_title'   => ''
+        // );
+
+        // register_sidebar( $args );
+
+       register_sidebar(array(
+            'name'=>'footer ultimas entradas'
+            ));
+
+        register_sidebar(array(
+            'name'=>'footer ultimas categorias'
+            ));
+
+
+
+
+
+
+
+}
+
+
+
+
+
 
 // Activando el soporte para las image_size_names_choose
-
-
-
 
 if ( function_exists( 'add_theme_support' ) ) {
     add_theme_support( 'post-thumbnails' );
