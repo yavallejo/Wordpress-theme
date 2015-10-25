@@ -1668,7 +1668,7 @@ Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, 
 
 /* Banner */
 
-	#banner {
+	/*#banner {
 		background: #CCE8F4 url("images/pic01.jpg");
 		background-position: center center;
 		background-size: auto 100%;
@@ -1691,7 +1691,7 @@ Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, 
 				padding: 0;
 				font-style: normal;
 				margin: 0;
-			}
+			}*/
 
 /* Wrappers */
 
@@ -2018,11 +2018,11 @@ Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, 
 
 			#banner {
 				position: relative;
-				padding: 8em 0;
-				margin: 4em 0 0 0;
+				overflow:hidden;
+				margin: 2em 0 0 0;
 			}
 
-				#banner header {
+				/*#banner header {
 					display: inline-block;
 					padding: 2.5em 5em;
 					border-radius: 5px;
@@ -2035,7 +2035,7 @@ Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, 
 
 					#banner header p {
 						font-size: 1.5em;
-					}
+					}*/
 
 		/* Intro */
 
