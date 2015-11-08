@@ -9,7 +9,7 @@
                                 <!-- Portfolio -->
                                     <section>
                                         <header class="major">
-                                            <h2>My Portfolio</h2>
+                                            <h2>Top Animes</h2>
                                         </header>
                                         <div class="row">
                                         <?php
@@ -38,7 +38,7 @@
                                                     </header>
                                                     <p><?php the_excerpt(); ?></p>
                                                     <footer>
-                                                        <a href="<?php the_permalink(); ?>" class="button alt">Find out more</a>
+                                                        <a href="<?php the_permalink(); ?>" class="button alt">Leer Más</a>
                                                     </footer>
                                                 </section>
                                             </div>
@@ -61,12 +61,12 @@
                                 <!-- Blog -->
                                     <section>
                                         <header class="major">
-                                            <h2>The Blog</h2>
+                                            <h2>Top Manga</h2>
                                         </header>
                                         <div class="row">
                                         <?php
                                                 query_posts(array(
-                                                    "showposts" => 2,
+                                                    "showposts" => 4,
                                                     "cat" => 5
                                                     ));
                                               ?>
@@ -89,8 +89,8 @@
                                                     <?php the_excerpt(); ?>
                                                     <footer>
                                                         <ul class="actions">
-                                                            <li><a href="<?php the_permalink(); ?>" class="button icon fa-file-text">Continue Reading</a></li>
-                                                            <li><a href="#" class="button alt icon fa-comment">33 comments</a></li>
+                                                            <li><a href="<?php the_permalink(); ?>" class="button icon fa-file-text">Leer Más</a></li>
+                                                            <li><a href="#" class="button alt icon fa-comment">33 Comentarios</a></li>
                                                         </ul>
                                                     </footer>
                                                 </section>
