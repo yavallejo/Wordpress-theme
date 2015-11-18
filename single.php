@@ -55,6 +55,10 @@
                                         <p>
                                             <?php the_content(); ?>
                                         </p>
+                                        <footer class="comentarios">
+                                            <?php comments_template(); ?>
+                                        </footer>
+
                                     </article>
                                 <?php endwhile; ?>
                                             <!-- post navigation -->
